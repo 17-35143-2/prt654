@@ -1,0 +1,638 @@
+// ---- Create Nodes ---- //
+
+// Create Client nodes
+CREATE (:Client {NdisNo: 1, Name: 'Alice Johnson', DOB: '1990-05-10', Age: 34, Gender: 'Female', DisabilityType: 'Physical', ContactNo: '555-1234', Address: '123 Elm Street'});
+CREATE (:Client {NdisNo: 2, Name: 'Bob Smith', DOB: '1985-08-22', Age: 39, Gender: 'Male', DisabilityType: 'Intellectual', ContactNo: '555-5678', Address: '456 Maple Street'});
+CREATE (:Client {NdisNo: 3, Name: 'Charlie Brown', DOB: '1992-12-02', Age: 32, Gender: 'Male', DisabilityType: 'Sensory', ContactNo: '555-9012', Address: '789 Pine Street'});
+CREATE (:Client {NdisNo: 4, Name: 'Daisy Lewis', DOB: '1998-03-18', Age: 26, Gender: 'Female', DisabilityType: 'Mental', ContactNo: '555-3456', Address: '321 Oak Street'});
+CREATE (:Client {NdisNo: 5, Name: 'Eve White', DOB: '1975-11-05', Age: 48, Gender: 'Female', DisabilityType: 'Physical', ContactNo: '555-7890', Address: '654 Cedar Street'});
+CREATE (:Client {NdisNo: 6, Name: 'Frank Black', DOB: '1994-06-12', Age: 30, Gender: 'Male', DisabilityType: 'Intellectual', ContactNo: '555-2345', Address: '987 Birch Street'});
+CREATE (:Client {NdisNo: 7, Name: 'Grace Green', DOB: '1988-04-27', Age: 36, Gender: 'Female', DisabilityType: 'Sensory', ContactNo: '555-6789', Address: '123 Spruce Street'});
+CREATE (:Client {NdisNo: 8, Name: 'Hank Blue', DOB: '1991-09-30', Age: 33, Gender: 'Male', DisabilityType: 'Mental', ContactNo: '555-0123', Address: '456 Redwood Street'});
+CREATE (:Client {NdisNo: 9, Name: 'Ivy Pink', DOB: '1983-02-15', Age: 41, Gender: 'Female', DisabilityType: 'Physical', ContactNo: '555-4567', Address: '789 Chestnut Street'});
+CREATE (:Client {NdisNo: 10, Name: 'Jack Gray', DOB: '1989-07-22', Age: 35, Gender: 'Male', DisabilityType: 'Intellectual', ContactNo: '555-8901', Address: '321 Walnut Street'});
+
+// Create ServiceProvider nodes
+CREATE (:ServiceProvider {ServiceProviderID: 1, ProviderName: 'Care Providers Ltd', ContactPerson: 'John Doe', ContactEmail: 'john.doe@careproviders.com', ContactPhone: '555-1111', Address: '111 Service Lane', RegistrationNo: 'CP12345'});
+CREATE (:ServiceProvider {ServiceProviderID: 2, ProviderName: 'Health Assist', ContactPerson: 'Jane Roe', ContactEmail: 'jane.roe@healthassist.com', ContactPhone: '555-2222', Address: '222 Health Blvd', RegistrationNo: 'HA54321'});
+CREATE (:ServiceProvider {ServiceProviderID: 3, ProviderName: 'Support Services Co', ContactPerson: 'Alan Smith', ContactEmail: 'alan.smith@supportservices.com', ContactPhone: '555-3333', Address: '333 Support St', RegistrationNo: 'SS98765'});
+CREATE (:ServiceProvider {ServiceProviderID: 4, ProviderName: 'Home Help Org', ContactPerson: 'Alice Brown', ContactEmail: 'alice.brown@homehelp.org', ContactPhone: '555-4444', Address: '444 Home Dr', RegistrationNo: 'HH65432'});
+CREATE (:ServiceProvider {ServiceProviderID: 5, ProviderName: 'Wellness Care', ContactPerson: 'Bob Green', ContactEmail: 'bob.green@wellnesscare.com', ContactPhone: '555-5555', Address: '555 Wellness Ave', RegistrationNo: 'WC13579'});
+
+// Create Services nodes
+CREATE (:Service {ServiceID: 1, ServiceName: 'Physical Therapy', ServiceDescription: 'Rehabilitation services for physical disabilities', ServiceType: 'Health'});
+CREATE (:Service {ServiceID: 2, ServiceName: 'Occupational Therapy', ServiceDescription: 'Support for daily living and work tasks', ServiceType: 'Health'});
+CREATE (:Service {ServiceID: 3, ServiceName: 'Speech Therapy', ServiceDescription: 'Speech and communication services', ServiceType: 'Health'});
+CREATE (:Service {ServiceID: 4, ServiceName: 'Personal Care', ServiceDescription: 'Assistance with personal hygiene and care', ServiceType: 'Care'});
+CREATE (:Service {ServiceID: 5, ServiceName: 'Community Access', ServiceDescription: 'Help with accessing the community', ServiceType: 'Support'});
+CREATE (:Service {ServiceID: 6, ServiceName: 'Accommodation Support', ServiceDescription: 'Housing and living support', ServiceType: 'Housing'});
+CREATE (:Service {ServiceID: 7, ServiceName: 'In-Home Care', ServiceDescription: 'Care provided in the home', ServiceType: 'Care'});
+CREATE (:Service {ServiceID: 8, ServiceName: 'Transportation', ServiceDescription: 'Transport services for clients', ServiceType: 'Transport'});
+CREATE (:Service {ServiceID: 9, ServiceName: 'Counseling', ServiceDescription: 'Mental health and emotional support services', ServiceType: 'Support'});
+CREATE (:Service {ServiceID: 10, ServiceName: 'Job Training', ServiceDescription: 'Support for finding and maintaining employment', ServiceType: 'Employment'});
+
+// Create SupportWorker nodes
+CREATE (:SupportWorker {SupportWorkerID: 1, Name: 'Tom Green', ContactNo: '555-1110', Gender: 'Male', DOB: '1980-02-12', Address: '101 Worker St', Email: 'tom.green@example.com', NPC: 'NPC123', EmergencyContact: '555-9111', LanguageSpoken: 'English'});
+CREATE (:SupportWorker {SupportWorkerID: 2, Name: 'Lisa Blue', ContactNo: '555-2220', Gender: 'Female', DOB: '1985-11-25', Address: '202 Worker Ave', Email: 'lisa.blue@example.com', NPC: 'NPC456', EmergencyContact: '555-9112', LanguageSpoken: 'Spanish'});
+CREATE (:SupportWorker {SupportWorkerID: 3, Name: 'Chris Black', ContactNo: '555-3330', Gender: 'Male', DOB: '1990-06-18', Address: '303 Worker Ln', Email: 'chris.black@example.com', NPC: 'NPC789', EmergencyContact: '555-9113', LanguageSpoken: 'French'});
+CREATE (:SupportWorker {SupportWorkerID: 4, Name: 'Nancy Red', ContactNo: '555-4440', Gender: 'Female', DOB: '1978-09-09', Address: '404 Worker Blvd', Email: 'nancy.red@example.com', NPC: 'NPC321', EmergencyContact: '555-9114', LanguageSpoken: 'German'});
+CREATE (:SupportWorker {SupportWorkerID: 5, Name: 'John White', ContactNo: '555-5550', Gender: 'Male', DOB: '1993-12-20', Address: '505 Worker Way', Email: 'john.white@example.com', NPC: 'NPC654', EmergencyContact: '555-9115', LanguageSpoken: 'English'});
+
+// Create Training nodes
+CREATE (:Training {TrainingID: 1, Name: 'First Aid', TrainingType: 'Certification', TrainingProvider: 'Red Cross', TrainingName: 'Basic First Aid', TrainingStatus: 'Completed', Description: 'Basic first aid training', TrainingDate: '2023-01-15'});
+CREATE (:Training {TrainingID: 2, Name: 'CPR', TrainingType: 'Certification', TrainingProvider: 'Red Cross', TrainingName: 'CPR Training', TrainingStatus: 'Completed', Description: 'Cardiopulmonary resuscitation training', TrainingDate: '2023-02-20'});
+CREATE (:Training {TrainingID: 3, Name: 'Manual Handling', TrainingType: 'Workshop', TrainingProvider: 'Care Skills Institute', TrainingName: 'Manual Handling Training', TrainingStatus: 'Ongoing', Description: 'Safe handling techniques', TrainingDate: '2023-03-10'});
+CREATE (:Training {TrainingID: 4, Name: 'Disability Awareness', TrainingType: 'Workshop', TrainingProvider: 'Disability Support Org', TrainingName: 'Disability Awareness Workshop', TrainingStatus: 'Completed', Description: 'Understanding disability support needs', TrainingDate: '2023-04-12'});
+CREATE (:Training {TrainingID: 5, Name: 'Behavioral Management', TrainingType: 'Seminar', TrainingProvider: 'Care Skills Institute', TrainingName: 'Managing Challenging Behavior', TrainingStatus: '
+
+
+CREATE (:Training {TrainingID: 5, Name: 'Behavioral Management', TrainingType: 'Seminar', TrainingProvider: 'Care Skills Institute', TrainingName: 'Managing Challenging Behavior', TrainingStatus: 'Ongoing', Description: 'Techniques for managing challenging behavior', TrainingDate: '2023-05-05'});
+
+// Create Funding nodes
+CREATE (:Funding {FundingID: 1, FundingType: 'Government', FundingPeriod: '2023'});
+CREATE (:Funding {FundingID: 2, FundingType: 'Private', FundingPeriod: '2023'});
+CREATE (:Funding {FundingID: 3, FundingType: 'Government', FundingPeriod: '2024'});
+CREATE (:Funding {FundingID: 4, FundingType: 'Private', FundingPeriod: '2024'});
+CREATE (:Funding {FundingID: 5, FundingType: 'Government', FundingPeriod: '2023'});
+
+
+// Create Accommodation nodes
+CREATE (:Accommodation {AccommodationID: 1, Status: 'Available', AccessibilityFeatures: 'Wheelchair Ramp', Location: 'Downtown', Rent: 1200.00, Capacity: 4, AccommodationType: 'Apartment', CurrentOccupancy: 3});
+CREATE (:Accommodation {AccommodationID: 2, Status: 'Occupied', AccessibilityFeatures: 'Elevator', Location: 'Uptown', Rent: 1500.00, Capacity: 6, AccommodationType: 'House', CurrentOccupancy: 6});
+CREATE (:Accommodation {AccommodationID: 3, Status: 'Available', AccessibilityFeatures: 'Wide Doors', Location: 'Midtown', Rent: 900.00, Capacity: 3, AccommodationType: 'Apartment', CurrentOccupancy: 2});
+CREATE (:Accommodation {AccommodationID: 4, Status: 'Occupied', AccessibilityFeatures: 'Handrails', Location: 'Suburbs', Rent: 1100.00, Capacity: 5, AccommodationType: 'House', CurrentOccupancy: 5});
+CREATE (:Accommodation {AccommodationID: 5, Status: 'Available', AccessibilityFeatures: 'Accessible Bathroom', Location: 'City Center', Rent: 2000.00, Capacity: 2, AccommodationType: 'Condo', CurrentOccupancy: 1});
+
+// Create Vehicle nodes
+CREATE (:Vehicle {AccommodationID: 1, VehicleID: 1, RegistrationNo: 'REG123', DateOfUse: '2023-01-10', VehicleType: 'Van', FuelType: 'Diesel', SeatingCapacity: 8, AccessibilityFeatures: 'Wheelchair Accessible', InsuranceDetails: 'Insured', FuelCost: 50.00, StartTime: '09:00', EndTime: '17:00'});
+CREATE (:Vehicle {AccommodationID: 2, VehicleID: 2, RegistrationNo: 'REG456', DateOfUse: '2023-02-15', VehicleType: 'Car', FuelType: 'Petrol', SeatingCapacity: 4, AccessibilityFeatures: 'None', InsuranceDetails: 'Insured', FuelCost: 40.00, StartTime: '08:00', EndTime: '16:00'});
+CREATE (:Vehicle {AccommodationID: 3, VehicleID: 3, RegistrationNo: 'REG789', DateOfUse: '2023-03-20', VehicleType: 'Minibus', FuelType: 'Electric', SeatingCapacity: 12, AccessibilityFeatures: 'Wheelchair Accessible', InsuranceDetails: 'Insured', FuelCost: 60.00, StartTime: '10:00', EndTime: '18:00'});
+CREATE (:Vehicle {AccommodationID: 4, VehicleID: 4, RegistrationNo: 'REG012', DateOfUse: '2023-04-25', VehicleType: 'Truck', FuelType: 'Diesel', SeatingCapacity: 6, AccessibilityFeatures: 'None', InsuranceDetails: 'Insured', FuelCost: 45.00, StartTime: '07:00', EndTime: '15:00'});
+CREATE (:Vehicle {AccommodationID: 5, VehicleID: 5, RegistrationNo: 'REG345', DateOfUse: '2023-05-30', VehicleType: 'Bus', FuelType: 'Electric', SeatingCapacity: 20, AccessibilityFeatures: 'Wheelchair Accessible', InsuranceDetails: 'Insured', FuelCost: 70.00, StartTime: '11:00', EndTime: '19:00'});
+
+// ---- Create Relationships ---- //
+
+// Agreement relationships between Client and ServiceProvider
+MATCH (c:Client {NdisNo: 1}), (sp:ServiceProvider {ServiceProviderID: 1})
+CREATE (c)-[:HAS_AGREEMENT {StartDate: '2023-01-01', EndDate: '2023-12-31', ServiceDetails: 'Personal Care Services', Status: 'Active', FundingType: 'Government'}]->(sp);
+
+MATCH (c:Client {NdisNo: 2}), (sp:ServiceProvider {ServiceProviderID: 2})
+CREATE (c)-[:HAS_AGREEMENT {StartDate: '2023-02-01', EndDate: '2023-12-31', ServiceDetails: 'Community Access Services', Status: 'Active', FundingType: 'Private'}]->(sp);
+
+MATCH (c:Client {NdisNo: 3}), (sp:ServiceProvider {ServiceProviderID: 3})
+CREATE (c)-[:HAS_AGREEMENT {StartDate: '2023-03-01', EndDate: '2023-12-31', ServiceDetails: 'Speech Therapy Services', Status: 'Inactive', FundingType: 'Government'}]->(sp);
+
+// Add additional Agreement relationships for other clients and service providers...
+
+// Create relationships between ServiceProvider and Funding
+MATCH (sp:ServiceProvider {ServiceProviderID: 1}), (f:Funding {FundingID: 1})
+CREATE (sp)-[:RECEIVES_FUNDING]->(f);
+
+MATCH (sp:ServiceProvider {ServiceProviderID: 2}), (f:Funding {FundingID: 2})
+CREATE (sp)-[:RECEIVES_FUNDING]->(f);
+
+// Continue with other ServiceProvider to Funding relationships...
+
+// Create SupportWorker to Services relationships
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (s:Service {ServiceID: 1})
+CREATE (sw)-[:PROVIDES]->(s);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (s:Service {ServiceID: 2})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Continue with other SupportWorker to Services relationships...
+
+// Create SupportWorker to Training relationships
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (t:Training {TrainingID: 1})
+CREATE (sw)-[:COMPLETED]->(t);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (t:Training {TrainingID: 2})
+CREATE (sw)-[:COMPLETED]->(t);
+
+// Continue with other SupportWorker to Training relationships...
+
+// Create Accommodation and Vehicle relationships
+MATCH (a:Accommodation {AccommodationID: 1}), (v:Vehicle {VehicleID: 1})
+CREATE (a)-[:HAS_VEHICLE]->(v);
+
+MATCH (a:Accommodation {AccommodationID: 2}), (v:Vehicle {VehicleID: 2})
+CREATE (a)-[:HAS_VEHICLE]->(v);
+
+// Continue with other Accommodation to Vehicle relationships...
+
+// Create Agreement relationships between Client and ServiceProvider for all clients
+
+// Client 1 (Alice Johnson) - Already Created
+// Client 2 (Bob Smith) - Already Created
+// Client 3 (Charlie Brown) - Already Created
+
+// Client 4 (Daisy Lewis)
+MATCH (c:Client {NdisNo: 4}), (sp:ServiceProvider {ServiceProviderID: 4})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-04-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'Occupational Therapy Services',
+    Status: 'Active',
+    FundingType: 'Private'
+}]->(sp);
+
+// Client 5 (Eve White)
+MATCH (c:Client {NdisNo: 5}), (sp:ServiceProvider {ServiceProviderID: 5})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-05-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'Physical Therapy Services',
+    Status: 'Active',
+    FundingType: 'Government'
+}]->(sp);
+
+// Client 6 (Frank Black)
+MATCH (c:Client {NdisNo: 6}), (sp:ServiceProvider {ServiceProviderID: 1})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-06-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'In-Home Care Services',
+    Status: 'Active',
+    FundingType: 'Private'
+}]->(sp);
+
+// Client 7 (Grace Green)
+MATCH (c:Client {NdisNo: 7}), (sp:ServiceProvider {ServiceProviderID: 2})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-07-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'Accommodation Support Services',
+    Status: 'Inactive',
+    FundingType: 'Government'
+}]->(sp);
+
+// Client 8 (Hank Blue)
+MATCH (c:Client {NdisNo: 8}), (sp:ServiceProvider {ServiceProviderID: 3})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-08-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'Transportation Services',
+    Status: 'Active',
+    FundingType: 'Private'
+}]->(sp);
+
+// Client 9 (Ivy Pink)
+MATCH (c:Client {NdisNo: 9}), (sp:ServiceProvider {ServiceProviderID: 4})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-09-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'Counseling Services',
+    Status: 'Inactive',
+    FundingType: 'Government'
+}]->(sp);
+
+// Client 10 (Jack Gray)
+MATCH (c:Client {NdisNo: 10}), (sp:ServiceProvider {ServiceProviderID: 5})
+CREATE (c)-[:HAS_AGREEMENT {
+    StartDate: '2023-10-01',
+    EndDate: '2023-12-31',
+    ServiceDetails: 'Job Training Services',
+    Status: 'Active',
+    FundingType: 'Private'
+}]->(sp);
+
+
+// Create missing SupportWorker to Training relationships
+
+// Chris Black (SupportWorkerID: 3) completed Manual Handling (TrainingID: 3)
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (t:Training {TrainingID: 3})
+CREATE (sw)-[:COMPLETED]->(t);
+
+// Nancy Red (SupportWorkerID: 4) completed Disability Awareness (TrainingID: 4)
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (t:Training {TrainingID: 4})
+CREATE (sw)-[:COMPLETED]->(t);
+
+// John White (SupportWorkerID: 5) completed Behavioral Management (TrainingID: 5)
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (t:Training {TrainingID: 5})
+CREATE (sw)-[:COMPLETED]->(t);
+
+
+// AccommodationID: 3 has VehicleID: 3
+MATCH (a:Accommodation {AccommodationID: 3}), (v:Vehicle {VehicleID: 3})
+CREATE (a)-[:HAS_VEHICLE]->(v);
+
+// AccommodationID: 4 has VehicleID: 4
+MATCH (a:Accommodation {AccommodationID: 4}), (v:Vehicle {VehicleID: 4})
+CREATE (a)-[:HAS_VEHICLE]->(v);
+
+// AccommodationID: 5 has VehicleID: 5
+MATCH (a:Accommodation {AccommodationID: 5}), (v:Vehicle {VehicleID: 5})
+CREATE (a)-[:HAS_VEHICLE]->(v);
+
+
+// Create missing SupportWorker to Service relationships
+
+// Tom Green (SupportWorkerID: 1) provides Physical Therapy (ServiceID: 1)
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (s:Service {ServiceID: 1})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Lisa Blue (SupportWorkerID: 2) provides Occupational Therapy (ServiceID: 2)
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (s:Service {ServiceID: 2})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Chris Black (SupportWorkerID: 3) provides Speech Therapy (ServiceID: 3)
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (s:Service {ServiceID: 3})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Nancy Red (SupportWorkerID: 4) provides Personal Care (ServiceID: 4)
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (s:Service {ServiceID: 4})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// John White (SupportWorkerID: 5) provides Community Access (ServiceID: 5)
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (s:Service {ServiceID: 5})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Tom Green (SupportWorkerID: 1) provides Accommodation Support (ServiceID: 6)
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (s:Service {ServiceID: 6})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Lisa Blue (SupportWorkerID: 2) provides In-Home Care (ServiceID: 7)
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (s:Service {ServiceID: 7})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Chris Black (SupportWorkerID: 3) provides Transportation (ServiceID: 8)
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (s:Service {ServiceID: 8})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// Nancy Red (SupportWorkerID: 4) provides Counseling (ServiceID: 9)
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (s:Service {ServiceID: 9})
+CREATE (sw)-[:PROVIDES]->(s);
+
+// John White (SupportWorkerID: 5) provides Job Training (ServiceID: 10)
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (s:Service {ServiceID: 10})
+CREATE (sw)-[:PROVIDES]->(s);
+
+
+// Create missing ServiceProvider to Funding relationships
+
+// ServiceProviderID: 3 receives FundingID: 3
+MATCH (sp:ServiceProvider {ServiceProviderID: 3}), (f:Funding {FundingID: 3})
+CREATE (sp)-[:RECEIVES_FUNDING]->(f);
+
+// ServiceProviderID: 4 receives FundingID: 4
+MATCH (sp:ServiceProvider {ServiceProviderID: 4}), (f:Funding {FundingID: 4})
+CREATE (sp)-[:RECEIVES_FUNDING]->(f);
+
+// ServiceProviderID: 5 receives FundingID: 5
+MATCH (sp:ServiceProvider {ServiceProviderID: 5}), (f:Funding {FundingID: 5})
+CREATE (sp)-[:RECEIVES_FUNDING]->(f);
+
+
+// Create Personal nodes and relationships
+CREATE (:Personal {SupportWorkerID: 1, PersonalCareTraining: 1, MobilityAssistance: 'Yes', PersonalHygienceCare: 'Yes', OneOnOneSupport: 'Yes'});
+CREATE (:Personal {SupportWorkerID: 2, PersonalCareTraining: 1, MobilityAssistance: 'No', PersonalHygienceCare: 'Yes', OneOnOneSupport: 'Yes'});
+CREATE (:Personal {SupportWorkerID: 3, PersonalCareTraining: 1, MobilityAssistance: 'Yes', PersonalHygienceCare: 'No', OneOnOneSupport: 'Yes'});
+CREATE (:Personal {SupportWorkerID: 4, PersonalCareTraining: 1, MobilityAssistance: 'No', PersonalHygienceCare: 'Yes', OneOnOneSupport: 'No'});
+CREATE (:Personal {SupportWorkerID: 5, PersonalCareTraining: 1, MobilityAssistance: 'Yes', PersonalHygienceCare: 'Yes', OneOnOneSupport: 'Yes'});
+
+// Create CommunityAccess nodes and relationships
+CREATE (:CommunityAccess {SupportWorkerID: 1, CommunityOutreachExperience: 'Yes', TransportationCapability: 'Yes', NavigationSkills: 'Excellent'});
+CREATE (:CommunityAccess {SupportWorkerID: 2, CommunityOutreachExperience: 'No', TransportationCapability: 'Yes', NavigationSkills: 'Good'});
+CREATE (:CommunityAccess {SupportWorkerID: 3, CommunityOutreachExperience: 'Yes', TransportationCapability: 'No', NavigationSkills: 'Fair'});
+CREATE (:CommunityAccess {SupportWorkerID: 4, CommunityOutreachExperience: 'Yes', TransportationCapability: 'Yes', NavigationSkills: 'Excellent'});
+CREATE (:CommunityAccess {SupportWorkerID: 5, CommunityOutreachExperience: 'No', TransportationCapability: 'No', NavigationSkills: 'Good'});
+
+// Create InHome nodes and relationships
+CREATE (:InHome {SupportWorkerID: 1, HouseholdTasks: 'Yes', MedicationAdministration: 'Yes', OvernightAvailability: 'No'});
+CREATE (:InHome {SupportWorkerID: 2, HouseholdTasks: 'No', MedicationAdministration: 'Yes', OvernightAvailability: 'Yes'});
+CREATE (:InHome {SupportWorkerID: 3, HouseholdTasks: 'Yes', MedicationAdministration: 'No', OvernightAvailability: 'No'});
+CREATE (:InHome {SupportWorkerID: 4, HouseholdTasks: 'Yes', MedicationAdministration: 'Yes', OvernightAvailability: 'Yes'});
+CREATE (:InHome {SupportWorkerID: 5, HouseholdTasks: 'No', MedicationAdministration: 'Yes', OvernightAvailability: 'No'});
+
+// Create relationships between SupportWorker and these nodes
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (p:Personal {SupportWorkerID: 1})
+CREATE (sw)-[:PARTICIPATES_IN]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (p:Personal {SupportWorkerID: 2})
+CREATE (sw)-[:PARTICIPATES_IN]->(p);
+
+// Repeat similar relationships for CommunityAccess and InHome
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (ca:CommunityAccess {SupportWorkerID: 1})
+CREATE (sw)-[:PARTICIPATES_IN]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (ca:CommunityAccess {SupportWorkerID: 2})
+CREATE (sw)-[:PARTICIPATES_IN]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (ih:InHome {SupportWorkerID: 1})
+CREATE (sw)-[:PARTICIPATES_IN]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (ih:InHome {SupportWorkerID: 2})
+CREATE (sw)-[:PARTICIPATES_IN]->(ih);
+
+
+// Create Invoice nodes
+CREATE (:Invoice {InvoiceID: 1, Date: '2023-01-15', DueDate: '2023-02-15', Description: 'Personal Care Services', TotalAmount: 500.00, BalanceDue: 100.00, PaymentStatus: 'Paid', PaymentMethod: 'Credit Card', ReceiptNumber: 'RC12345'});
+
+// Create relationships between Accommodation and Invoice
+MATCH (a:Accommodation {AccommodationID: 1}), (i:Invoice {InvoiceID: 1})
+CREATE (a)-[:GENERATES]->(i);
+
+// Create relationships between Vehicle and Invoice
+MATCH (v:Vehicle {VehicleID: 1}), (i:Invoice {InvoiceID: 1})
+CREATE (v)-[:GENERATES]->(i);
+
+// Add other Invoices and relationships for other Accommodation and Vehicle nodes
+CREATE (:Invoice {InvoiceID: 2, Date: '2023-02-15', DueDate: '2023-03-15', Description: 'Community Access Services', TotalAmount: 300.00, BalanceDue: 0.00, PaymentStatus: 'Paid', PaymentMethod: 'Bank Transfer', ReceiptNumber: 'RC54321'});
+
+MATCH (a:Accommodation {AccommodationID: 2}), (i:Invoice {InvoiceID: 2})
+CREATE (a)-[:GENERATES]->(i);
+
+MATCH (v:Vehicle {VehicleID: 2}), (i:Invoice {InvoiceID: 2})
+CREATE (v)-[:GENERATES]->(i);
+
+// Repeat for the other accommodations, vehicles, and invoices
+
+
+// Create Personal relationships for the remaining support workers
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (p:Personal {SupportWorkerID: 3})
+CREATE (sw)-[:PARTICIPATES_IN]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (p:Personal {SupportWorkerID: 4})
+CREATE (sw)-[:PARTICIPATES_IN]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (p:Personal {SupportWorkerID: 5})
+CREATE (sw)-[:PARTICIPATES_IN]->(p);
+
+// Create CommunityAccess relationships for the remaining support workers
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (ca:CommunityAccess {SupportWorkerID: 3})
+CREATE (sw)-[:PARTICIPATES_IN]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (ca:CommunityAccess {SupportWorkerID: 4})
+CREATE (sw)-[:PARTICIPATES_IN]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (ca:CommunityAccess {SupportWorkerID: 5})
+CREATE (sw)-[:PARTICIPATES_IN]->(ca);
+
+// Create InHome relationships for the remaining support workers
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (ih:InHome {SupportWorkerID: 3})
+CREATE (sw)-[:PARTICIPATES_IN]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (ih:InHome {SupportWorkerID: 4})
+CREATE (sw)-[:PARTICIPATES_IN]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (ih:InHome {SupportWorkerID: 5})
+CREATE (sw)-[:PARTICIPATES_IN]->(ih);
+
+
+// Create Invoice nodes and relationships with Accommodation and Vehicle
+
+// Invoice for AccommodationID: 3 and VehicleID: 3
+CREATE (:Invoice {InvoiceID: 3, Date: '2023-03-15', DueDate: '2023-04-15', Description: 'Speech Therapy Services', TotalAmount: 400.00, BalanceDue: 50.00, PaymentStatus: 'Partial', PaymentMethod: 'Credit Card', ReceiptNumber: 'RC67890'});
+
+MATCH (a:Accommodation {AccommodationID: 3}), (i:Invoice {InvoiceID: 3})
+CREATE (a)-[:GENERATES]->(i);
+
+MATCH (v:Vehicle {VehicleID: 3}), (i:Invoice {InvoiceID: 3})
+CREATE (v)-[:GENERATES]->(i);
+
+// Invoice for AccommodationID: 4 and VehicleID: 4
+CREATE (:Invoice {InvoiceID: 4, Date: '2023-04-15', DueDate: '2023-05-15', Description: 'Occupational Therapy Services', TotalAmount: 600.00, BalanceDue: 0.00, PaymentStatus: 'Paid', PaymentMethod: 'Cash', ReceiptNumber: 'RC98765'});
+
+MATCH (a:Accommodation {AccommodationID: 4}), (i:Invoice {InvoiceID: 4})
+CREATE (a)-[:GENERATES]->(i);
+
+MATCH (v:Vehicle {VehicleID: 4}), (i:Invoice {InvoiceID: 4})
+CREATE (v)-[:GENERATES]->(i);
+
+// Invoice for AccommodationID: 5 and VehicleID: 5
+CREATE (:Invoice {InvoiceID: 5, Date: '2023-05-15', DueDate: '2023-06-15', Description: 'Physical Therapy Services', TotalAmount: 700.00, BalanceDue: 100.00, PaymentStatus: 'Pending', PaymentMethod: 'Credit Card', ReceiptNumber: 'RC13579'});
+
+MATCH (a:Accommodation {AccommodationID: 5}), (i:Invoice {InvoiceID: 5})
+CREATE (a)-[:GENERATES]->(i);
+
+MATCH (v:Vehicle {VehicleID: 5}), (i:Invoice {InvoiceID: 5})
+CREATE (v)-[:GENERATES]->(i);
+
+
+// Accommodation 1 includes Service 6 (Accommodation Support)
+MATCH (a:Accommodation {AccommodationID: 1}), (s:Service {ServiceID: 6})
+CREATE (a)-[:INCLUDES]->(s);
+
+// Accommodation 2 includes Service 7 (In-Home Care)
+MATCH (a:Accommodation {AccommodationID: 2}), (s:Service {ServiceID: 7})
+CREATE (a)-[:INCLUDES]->(s);
+
+// Accommodation 3 includes Service 6 (Accommodation Support)
+MATCH (a:Accommodation {AccommodationID: 3}), (s:Service {ServiceID: 6})
+CREATE (a)-[:INCLUDES]->(s);
+
+// Accommodation 4 includes Service 7 (In-Home Care)
+MATCH (a:Accommodation {AccommodationID: 4}), (s:Service {ServiceID: 7})
+CREATE (a)-[:INCLUDES]->(s);
+
+// Accommodation 5 includes Service 6 (Accommodation Support)
+MATCH (a:Accommodation {AccommodationID: 5}), (s:Service {ServiceID: 6})
+CREATE (a)-[:INCLUDES]->(s);
+
+
+// ServiceProvider 1 provides Service 1 (Physical Therapy)
+MATCH (sp:ServiceProvider {ServiceProviderID: 1}), (s:Service {ServiceID: 1})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 2 provides Service 2 (Occupational Therapy)
+MATCH (sp:ServiceProvider {ServiceProviderID: 2}), (s:Service {ServiceID: 2})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 3 provides Service 3 (Speech Therapy)
+MATCH (sp:ServiceProvider {ServiceProviderID: 3}), (s:Service {ServiceID: 3})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 4 provides Service 4 (Personal Care)
+MATCH (sp:ServiceProvider {ServiceProviderID: 4}), (s:Service {ServiceID: 4})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 5 provides Service 5 (Community Access)
+MATCH (sp:ServiceProvider {ServiceProviderID: 5}), (s:Service {ServiceID: 5})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// Establish more relationships using the remaining services
+
+// ServiceProvider 1 provides Service 6 (Accommodation Support)
+MATCH (sp:ServiceProvider {ServiceProviderID: 1}), (s:Service {ServiceID: 6})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 2 provides Service 7 (In-Home Care)
+MATCH (sp:ServiceProvider {ServiceProviderID: 2}), (s:Service {ServiceID: 7})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 3 provides Service 8 (Transportation)
+MATCH (sp:ServiceProvider {ServiceProviderID: 3}), (s:Service {ServiceID: 8})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 4 provides Service 9 (Counseling)
+MATCH (sp:ServiceProvider {ServiceProviderID: 4}), (s:Service {ServiceID: 9})
+CREATE (sp)-[:ENGAGES]->(s);
+
+// ServiceProvider 5 provides Service 10 (Job Training)
+MATCH (sp:ServiceProvider {ServiceProviderID: 5}), (s:Service {ServiceID: 10})
+CREATE (sp)-[:ENGAGES]->(s);
+
+
+// ServiceProvider 1 provides Service 1 (Physical Therapy)
+MATCH (sp:ServiceProvider {ServiceProviderID: 1}), (s:Service {ServiceID: 1})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 2 provides Service 2 (Occupational Therapy)
+MATCH (sp:ServiceProvider {ServiceProviderID: 2}), (s:Service {ServiceID: 2})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 3 provides Service 3 (Speech Therapy)
+MATCH (sp:ServiceProvider {ServiceProviderID: 3}), (s:Service {ServiceID: 3})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 4 provides Service 4 (Personal Care)
+MATCH (sp:ServiceProvider {ServiceProviderID: 4}), (s:Service {ServiceID: 4})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 5 provides Service 5 (Community Access)
+MATCH (sp:ServiceProvider {ServiceProviderID: 5}), (s:Service {ServiceID: 5})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// Additional services relationships with ASSIGNMENT
+
+// ServiceProvider 1 provides Service 6 (Accommodation Support)
+MATCH (sp:ServiceProvider {ServiceProviderID: 1}), (s:Service {ServiceID: 6})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 2 provides Service 7 (In-Home Care)
+MATCH (sp:ServiceProvider {ServiceProviderID: 2}), (s:Service {ServiceID: 7})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 3 provides Service 8 (Transportation)
+MATCH (sp:ServiceProvider {ServiceProviderID: 3}), (s:Service {ServiceID: 8})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 4 provides Service 9 (Counseling)
+MATCH (sp:ServiceProvider {ServiceProviderID: 4}), (s:Service {ServiceID: 9})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+// ServiceProvider 5 provides Service 10 (Job Training)
+MATCH (sp:ServiceProvider {ServiceProviderID: 5}), (s:Service {ServiceID: 10})
+CREATE (sp)-[:ASSIGNMENT]->(s);
+
+
+// Match all PARTICIPATES_IN relationships and create corresponding GENERATES relationships
+MATCH (sw:SupportWorker)-[r:PARTICIPATES_IN]->(n)
+CREATE (sw)-[:GENERATES]->(n);
+
+// Delete the old PARTICIPATES_IN relationships
+MATCH (sw:SupportWorker)-[r:PARTICIPATES_IN]->(n)
+DELETE r;
+
+
+// Match all HAS_VEHICLE relationships and create corresponding BELONGS_TO relationships
+MATCH (a:Accommodation)-[r:HAS_VEHICLE]->(v:Vehicle)
+CREATE (a)-[:BELONGS_TO]->(v);
+
+// Delete the old HAS_VEHICLE relationships
+MATCH (a:Accommodation)-[r:HAS_VEHICLE]->(v:Vehicle)
+DELETE r;
+
+// Create PROVIDES_SUPPORT relationships for Personal, InHome, and CommunityAccess
+
+// Create PROVIDES_SUPPORT relationships for Personal, InHome, and CommunityAccess
+
+// For Personal relationships
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (p:Personal {SupportWorkerID: 1})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (p:Personal {SupportWorkerID: 2})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (p:Personal {SupportWorkerID: 3})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (p:Personal {SupportWorkerID: 4})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(p);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (p:Personal {SupportWorkerID: 5})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(p);
+
+// For CommunityAccess relationships
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (ca:CommunityAccess {SupportWorkerID: 1})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (ca:CommunityAccess {SupportWorkerID: 2})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (ca:CommunityAccess {SupportWorkerID: 3})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (ca:CommunityAccess {SupportWorkerID: 4})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ca);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (ca:CommunityAccess {SupportWorkerID: 5})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ca);
+
+// For InHome relationships
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (ih:InHome {SupportWorkerID: 1})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (ih:InHome {SupportWorkerID: 2})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (ih:InHome {SupportWorkerID: 3})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (ih:InHome {SupportWorkerID: 4})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ih);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (ih:InHome {SupportWorkerID: 5})
+CREATE (sw)-[:PROVIDES_SUPPORT]->(ih);
+
+// Delete the incorrect GENERATES relationships for Personal, InHome, and CommunityAccess
+MATCH (sw:SupportWorker)-[r:GENERATES]->(p:Personal)
+DELETE r;
+
+MATCH (sw:SupportWorker)-[r:GENERATES]->(ca:CommunityAccess)
+DELETE r;
+
+MATCH (sw:SupportWorker)-[r:GENERATES]->(ih:InHome)
+DELETE r;
+
+
+// Continue for the remaining SupportWorkerID values (3, 4, 5) similarly...
+
+// Create PARTICIPATES_IN relationships between SupportWorker and Training
+
+MATCH (sw:SupportWorker {SupportWorkerID: 1}), (t:Training {TrainingID: 1})
+CREATE (sw)-[:PARTICIPATES_IN]->(t);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 2}), (t:Training {TrainingID: 2})
+CREATE (sw)-[:PARTICIPATES_IN]->(t);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 3}), (t:Training {TrainingID: 3})
+CREATE (sw)-[:PARTICIPATES_IN]->(t);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 4}), (t:Training {TrainingID: 4})
+CREATE (sw)-[:PARTICIPATES_IN]->(t);
+
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (t:Training {TrainingID: 5})
+CREATE (sw)-[:PARTICIPATES_IN]->(t);
+
+
+// Delete the COMPLETED relationships between SupportWorker and Training
+MATCH (sw:SupportWorker)-[r:COMPLETED]->(t:Training)
+DELETE r;
+
+// Create the missing Training node for TrainingID 5
+CREATE (:Training {TrainingID: 5, Name: 'Behavioral Management', TrainingType: 'Seminar', TrainingProvider: 'Care Skills Institute', TrainingName: 'Managing Challenging Behavior', TrainingStatus: 'Ongoing', Description: 'Techniques for managing challenging behavior', TrainingDate: '2023-05-05'});
+
+// Create PARTICIPATES_IN relationship for SupportWorkerID 5 and TrainingID 5
+MATCH (sw:SupportWorker {SupportWorkerID: 5}), (t:Training {TrainingID: 5})
+CREATE (sw)-[:PARTICIPATES_IN]->(t);
+
+
+
+
+
+
+
+
+
+
